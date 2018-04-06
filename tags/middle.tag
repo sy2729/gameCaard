@@ -3,7 +3,7 @@
   <section>
     <figure class="gallery">
       <div class="img-wrap">
-        <img src="./img/card2.png" alt="card2.png">
+        <img src="./img/card-back.png" alt="card2.png">
       </div>
       <div class="intro">
         <h2>Lorem, ipsum dolor.</h2>

@@ -4,6 +4,8 @@
     <info-piece each = {i in info} title = {i} class="info-piece"></info-piece>
   </div>
 
+  <div class="banner"></div>
+
   
   <script>
     
@@ -14,15 +16,15 @@
       },
       {
         level: "Expert",
-        src: "./img/card1.png"
+        src: "./img/card2.png"
       },  
       {
         level: "Expert",
-        src: "./img/card1.png"
+        src: "./img/card3.png"
       },  
       {
         level: "Master",
-        src: "./img/card1.png"
+        src: "./img/card4.png"
       }
     ]
 
