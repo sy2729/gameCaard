@@ -82,7 +82,7 @@
 
     .head > .head-content > .head-card img {
       width: auto;
-      height: 660px;
+      height: 560px;
       margin: 0 auto;
     }
 
