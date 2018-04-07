@@ -5,9 +5,9 @@
     <div class="head-nav clearfix">
       <div class="logo">LOGO</div>
       <ul class="nav">
-        <li>Feature</li>
-        <li>Pricing</li>
-        <li>Blog</li>
+        <li><a href="">Feature</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Blog</a></li>
       </ul>
     </div>
     <div class="head-content">
@@ -23,10 +23,15 @@
   <middle></middle>
 
 
-
   <info-panel>
 
   </info-panel>
+  
+
+  <info-footer>
+    
+  </info-footer>
+
   <script>
   
   </script>
@@ -64,11 +69,15 @@
       font-size: 1.2em;
       cursor: pointer;
     }
+    .head .head-nav .nav li a{
+      color: inherit;
+    }
 
 
     .head .head-content {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
 
     .head > .head-content > .head-card img {
@@ -82,13 +91,14 @@
       flex-direction: column;
       justify-content: center;
       max-width: 40%;
+      padding: 20px 0;
     }
     
     .head > .head-content > .intro h1 {
       color: #FFFEFD;
       font-size: 3em;
       font-weight: 300;
-
+      white-space: nowrap;
     }
 
     .head > .head-content > .intro p {

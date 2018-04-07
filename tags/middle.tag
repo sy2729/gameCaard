@@ -6,8 +6,8 @@
         <img src="./img/card-back.png" alt="card2.png">
       </div>
       <div class="intro">
-        <h2>Lorem, ipsum dolor.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, ut.</p>
+        <h2>consolidate at every step</h2>
+        <p>Code this decisive battle and win the game.</p>
       </div>
     </figure>
   </section>
