@@ -36,9 +36,13 @@
         flex: 1;
         padding: 70px;
         box-sizing: border-box;
+        min-width: 300px;
+        -webkit-flex: 1 1 300px;
       }
+
       footer .footer-left {
         background: #b67993;
+        /* flex: 1 1 auto; */
       }
       footer .footer-left a {
         color: inherit;
@@ -48,6 +52,7 @@
       }
       footer .footer-right {
         background: rgb(123,83,128);
+        /* flex: 1 1 auto; */
       }
       footer .footer-right .email {
         padding: 20px 0 0;

@@ -40,7 +40,6 @@
     }
 
     .info-piece {
-      width: 33.3%;
       min-width: 300px;
       /* background: #aaa; */
       text-align: center;
