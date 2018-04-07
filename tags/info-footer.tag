@@ -34,7 +34,6 @@
       footer .footer-left, footer .footer-right{
         color: #fff;
         flex: 1;
-        min-width: 400px;
         padding: 70px;
         box-sizing: border-box;
       }
