@@ -10,6 +10,15 @@
         <p>Code this decisive battle and win the game.</p>
       </div>
     </figure>
+    <figure class="gallery gallery2">
+      <div class="intro">
+        <h2>consolidate at every step</h2>
+        <p>Code this decisive battle and win the game.</p>
+      </div>
+      <div class="img-wrap">
+        <img src="./img/board.png" alt="board.png">
+      </div>
+    </figure>
   </section>
   <script>
     
@@ -21,18 +30,26 @@
       justify-content: space-around;
       padding: 40px 15px;
       margin: 50px 0;
+      flex-wrap: wrap;
     }
     .gallery .intro {
       flex: 5 2;
+      text-align: center;
     }
       
 
     .gallery .img-wrap{ 
       flex: 4 1;
       text-align: center;
+      min-width: 300px;
     }
     .gallery img{
       height: 400px;
+      width: auto;
+    }
+
+    .gallery2 img {
+      height: 300px;
       width: auto;
     }
   </style>
