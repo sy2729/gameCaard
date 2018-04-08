@@ -111,7 +111,7 @@
 
     .head > .head-content > .intro > .headBtn {
       width: 30%;
-      min-width: 100px;
+      min-width: 200px;
       height: 50px;
       background: transparent;
       border-radius: 10px;
