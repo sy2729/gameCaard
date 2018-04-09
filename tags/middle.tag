@@ -35,6 +35,7 @@
     .gallery .intro {
       flex: 5 2;
       text-align: center;
+      min-width: 200px;
     }
       
 
@@ -44,13 +45,13 @@
       min-width: 300px;
     }
     .gallery img{
-      height: 400px;
-      width: auto;
+      width: 60%;
+      height: auto;
     }
 
     .gallery2 img {
-      height: 300px;
-      width: auto;
+      height: auto;
+      width: 100%;
     }
   </style>
 </middle>
