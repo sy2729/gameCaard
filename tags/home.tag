@@ -2,7 +2,7 @@
 <home>
   <section class="head">
     <div class="head-nav clearfix">
-      <div class="logo">LOGO</div>
+      <div class="logo"><img src="./img/logo.png" alt=""></div>
       <ul class="nav">
         <li>
           <a href="#tutorial">Tutorial</a>
@@ -62,7 +62,11 @@
     }
     .head .head-nav .logo {
       float: left;
-      
+    }
+    .head .head-nav .logo img {
+      width: 40px;
+      height: auto;
+      vertical-align: middle;
     }
     .head .head-nav .nav{
       float: right;

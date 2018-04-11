@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Catamaran', Helvetica, Arial, sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+select:focus {
+    outline: none;
+}
+
+/* loading animation */
+.loading {
+    background: #fff;
+}
+.loading,  .loading img{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.loading img {
+    margin: auto;
+    width: 100px;
+    height: auto;
+}
+#loading-move {
+    animation: rotate ease-in-out 4.5s infinite;
+    transform-origin: center;
+    z-index: 100;
+}
+
+@keyframes rotate {
+    0% {
+        /* transform: rotate(0); */
+        transform: translateY(0);
+    }
+    33.3% {
+        transform: translateY(-100px);
+        /* transform: rotate(360deg); */
+    }
+    66.6% {
+        transform: translateY(0px);
+        /* transform: rotate(360deg); */
+    }
+    100% {
+        transform: translateY(0px);
+        /* transform: rotate(360deg); */
+    }
+}
+
+.loading.remove {
+    animation: remove 2s ease-in-out forwards;
+}
+@keyframes remove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+
+/* responsive code */
+@media only screen and (max-width: 500px){
+    .head-content .head-card img {
+        height: 360px !important;
+    }
+    .gallery .img-wrap {
+        order: 2 !important;
+    }
+    .gallery .intro {
+        padding: 20px !important;
+    }
+
+
+
+/* reusable code */
+.subtitle {
+    text-align: center;
+    padding: 60px 0;
+}

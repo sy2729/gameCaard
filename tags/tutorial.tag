@@ -2,7 +2,7 @@
 <tutorial>
   <section class="head">
     <div class="head-nav clearfix">
-      <a href="#home"><div class="logo">LOGO</div></a>
+      <a href="#home"><div class="logo"><img src="./img/logo.png" alt=""></div></a>
       <ul class="nav">
         <li>
           <select name="SelectCard" id="selectCard" onchange={selectCard}>
@@ -38,6 +38,12 @@
     </div>
   </section>
 
+  <tutorialCharacter></tutorialCharacter>
+  <tutorialRules></tutorialRules>
+
+
+
+  <info-footer></info-footer>
 
   <script>
     var that = this;
@@ -106,7 +112,11 @@
     }
     .head .head-nav .logo {
       float: left;
-      
+    }
+    .head .head-nav .logo img{
+      width: 40px;
+      height: auto;
+      vertical-align: middle;
     }
     .head .head-nav .nav{
       float: right;
