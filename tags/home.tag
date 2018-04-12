@@ -39,7 +39,20 @@
   
   </info-footer>
   <script>
-    
+    //detect scrolling
+      this.on('mount', function () {
+        var wrap = document.querySelectorAll('.tobeanimate');
+        window.onscroll = function () {
+          var scrollY = window.scrollY;
+          var minIndex = 0;
+          wrap.forEach(function (i, j) {
+            if (Math.abs(i.offsetTop - scrollY) < Math.abs(wrap[minIndex].offsetTop - scrollY)) {
+              minIndex = j;
+            };
+          })
+          wrap[minIndex].classList.add('slideIn');
+        }
+      })
   </script>
 
   <style>

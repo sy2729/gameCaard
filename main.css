@@ -26,6 +26,7 @@ select:focus {
 /* loading animation */
 .loading {
     background: #fff;
+    z-index: 10;
 }
 .loading,  .loading img{
     position: fixed;
@@ -89,11 +90,34 @@ select:focus {
     .gallery .intro {
         padding: 20px !important;
     }
+}
 
 
 
-/* reusable code */
+
+/* reusable code  */
 .subtitle {
     text-align: center;
     padding: 60px 0;
+}
+
+.tobeanimate {
+    /* transition: all 2s; */
+    opacity: 0;
+}
+
+.slideIn {
+    /* opacity: 1; */
+    animation: slideIn ease-in-out 1s forwards;
+}
+
+@keyframes slideIn{
+    from {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

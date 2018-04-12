@@ -1,6 +1,6 @@
 
 <tutorialRules>
-  <section class="rules-wrap">
+  <section class="rules-wrap tobeanimate">
     <h1 class="subtitle">Move With programming thinking</h1>
     <div class="demo">
       <div class="chessBlocks">
@@ -14,16 +14,18 @@
     for(let i = 0; i < 64; i++) {
       this.chessBlock.push('haha');
     }
+
+    this.on('mount', function() {
+      // console.log(document.querySelectorAll('.blocks')[35]);
+      document.querySelectorAll('.blocks')[35].textContent = 'activate';
+    })
+
+
   </script>
 
   <style>
     .rules-wrap {
       min-height: 500px;
-    }
-    
-    .subtitle {
-      text-align: center;
-      padding: 60px 0;
     }
     
     .rules-wrap .demo .chessBlocks {
@@ -46,7 +48,7 @@
       position: absolute;
       bottom: 0;
       right: 200px;
-      background: linear-gradient(to right top, #7d5182, #bc5e84, #ec7774, #ffa05c, #fad452);
+      background: #FAD063;
       border: transparent;
       border-radius: 50%;
       animation: chessMove 5s steps(1, end) infinite;
@@ -68,6 +70,7 @@
       60% {
         bottom: 150px;
         right: 200px;
+        background: linear-gradient(to right top, #7d5182, #bc5e84, #ec7774, #ffa05c, #fad452);
       }
       80% {
         bottom: 150px;
@@ -91,6 +94,10 @@
     .rules-wrap .demo .chessBlocks .blocks:nth-child(36){
       background: #7B5380;
       border: none;
+      text-align: center;
+      color: #fff;
+      font-size: 13px;
+      line-height: 50px;
     }
     
   </style>

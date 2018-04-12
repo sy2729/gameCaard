@@ -1,6 +1,6 @@
 
 <middle>
-  <section>
+  <section class="tobeanimate">
     <figure class="gallery">
       <div class="img-wrap">
         <img src="./img/card-back.png" alt="card2.png">

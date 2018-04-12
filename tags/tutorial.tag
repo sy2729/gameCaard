@@ -38,8 +38,9 @@
     </div>
   </section>
 
-  <tutorialCharacter></tutorialCharacter>
-  <tutorialRules></tutorialRules>
+  <tutorialCharacter ref="wrap"></tutorialCharacter>
+  <tutorialRules ></tutorialRules>
+  <tutorialFunction></tutorialFunction>
 
 
 
@@ -73,7 +74,6 @@
       if(this.index < 0) {
         this.index = this.cards.length-1;
       };
-      // console.log(this.index)
       this.update();
     };
     changeRight() {
@@ -81,7 +81,6 @@
       if(this.index > 2) {
         this.index = 0;
       };
-      // console.log(this.index)
       this.update();
     };
     selectCard() {
@@ -89,6 +88,21 @@
       this.index = select.value - 0;
     };
 
+
+    //detect scrolling
+      this.on('mount', function () {
+          var wrap = document.querySelectorAll('.tobeanimate');
+          window.onscroll = function () {
+            var scrollY = window.scrollY;
+            var minIndex = 0;
+            wrap.forEach(function(i,j) {
+              if(Math.abs(i.offsetTop - scrollY) < Math.abs(wrap[minIndex].offsetTop - scrollY)){
+                minIndex = j;
+              };
+            })
+            wrap[minIndex].classList.add('slideIn');
+          }
+      })
 
   </script>
 
@@ -222,5 +236,11 @@
       margin: 15px 0;
       font-weight: 100;
     }
+
+
+    .slideIn {
+    opacity: 1 !important;
+}
+
   </style>
 </tutorial>

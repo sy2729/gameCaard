@@ -1,10 +1,12 @@
 
 <info-panel>
-  <div class="panel-wrap">
-    <info-piece each = {i in info} title = {i} class="info-piece"></info-piece>
+  <div class="tobeanimate">
+    <div class="panel-wrap">
+      <info-piece each = {i in info} title = {i} class="info-piece"></info-piece>
+    </div>
+  
+    <div class="banner"></div>
   </div>
-
-  <div class="banner"></div>
 
   
   <script>
@@ -12,19 +14,19 @@
     this.info = [
       {
         level: "beginner",
-        src: "./img/card1.png"
+        src: "./img/knight.png"
       },
       {
         level: "Expert",
-        src: "./img/card2.png"
+        src: "./img/warrior.png"
       },  
       {
         level: "Expert",
-        src: "./img/card3.png"
+        src: "./img/wizzard.png"
       },  
       {
         level: "Master",
-        src: "./img/card4.png"
+        src: "./img/archer.png"
       }
     ]
 

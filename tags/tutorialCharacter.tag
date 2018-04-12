@@ -1,6 +1,6 @@
 
 <tutorialCharacter>
-  <section class="character">
+  <section class="character tobeanimate">
     <h1 class="subtitle">Activate Your Roles</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste explicabo aperiam atque voluptate quam recusandae facere commodi obcaecati impedit cum.</p>
     <div class="role-with-display">
@@ -23,23 +23,23 @@
 
     this.characters = [
       {
-        name: "XXX",
+        name: "KNIGHT",
         url: "./img/character1.jpeg",
         intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
       },
       {
-        name: "YYY",
+        name: "WARRIOR",
         url: "./img/character2.jpeg",
         intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
       },
       {
-        name: "ZZZ",
+        name: "WIZZARD",
         url: "./img/character3.jpeg",
         intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
 
       },
       {
-        name: "BBB",
+        name: "ARCHER",
         url: "./img/character4.jpeg",
         intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
       }
@@ -77,11 +77,6 @@
       justify-content: space-around;
       flex-wrap: wrap;
     }
-
-    .character .subtitle {
-      text-align: center;
-      padding: 60px 0 10px;
-    }
     
     .character .subtitle + p {
       text-align: center;
@@ -94,6 +89,8 @@
       width: 60%;
       display: flex;
       height: 500px;
+      box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.5);
+      background: #4A6770;
     }
     .character .roleWrap .role{
       min-width: 50px;
