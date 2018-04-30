@@ -98,7 +98,7 @@ select:focus {
 /* reusable code  */
 .subtitle {
     text-align: center;
-    padding: 60px 0;
+    padding: 60px 0 25px;
 }
 
 .tobeanimate {

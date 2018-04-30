@@ -2,7 +2,7 @@
 <tutorialCharacter>
   <section class="character tobeanimate">
     <h1 class="subtitle">Activate Your Roles</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste explicabo aperiam atque voluptate quam recusandae facere commodi obcaecati impedit cum.</p>
+    <p>After player stepping on the black "activate" square, they could choose a character as their identity, which would allow them to use the character’s special attacking or moving feature later. Whoever first arrive the block have the priority to choose the characters</p>
     <div class="role-with-display">
       <div class="roleWrap">
         <div class="role" each={i in characters} style={"background-image:" + "url('" + i.url + "')"}
@@ -11,6 +11,7 @@
       <div class="role-display" ref="roleDisplay">
         <h2>{showItem.name}</h2>
         <p>{showItem.intro}</p>
+        <img src= { showItem.demo } alt={showItem.name} class="role-demo">
       </div>
     </div>      
     </div>
@@ -25,23 +26,26 @@
       {
         name: "KNIGHT",
         url: "./img/character1.jpeg",
-        intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+        intro: "Facing forward direction, knight may attack in both diagonal direction, within one square range",
+        demo: "./img/knight-demo.png"
       },
       {
         name: "WARRIOR",
         url: "./img/character2.jpeg",
-        intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+        intro: "Facing forward direction, warrior may attack one square range, his left, forward and right directions",
+        demo: "./img/warrior-demo.png"
       },
       {
-        name: "WIZZARD",
+        name: "WIZARD",
         url: "./img/character3.jpeg",
-        intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
-
+        intro: "Facing forward direction, wizard may attack two squares rangeAlso, deactivate other’s role whom wizard attacks",
+        demo: "./img/wizard-demo.png"
       },
       {
         name: "ARCHER",
         url: "./img/character4.jpeg",
-        intro: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+        intro: "Facing forward direction, archer may attack three squares range",
+        demo: "./img/archer-demo.png"
       }
     ];
 
@@ -114,6 +118,14 @@
     }
     .character .role-display.animate-fade-in {
       animation: fade-in .4s ease-in-out;
+    }
+    .character .role-display h1, .character .role-display p {
+      margin: 5px 0;
+    }
+    .character .role-display .role-demo {
+      margin-top: 20px;
+      max-width: 200px;
+      height: auto;
     }
 
     @keyframes fade-in {

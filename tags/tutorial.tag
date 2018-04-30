@@ -10,6 +10,7 @@
             <option value="0">Function</option>
             <option value="1">Property</option>
             <option value="2">Attack</option>
+            <option value="3">Movement</option>
           </select>
         </li>
         <li>
@@ -40,7 +41,8 @@
 
   <tutorialCharacter ref="wrap"></tutorialCharacter>
   <tutorialRules ></tutorialRules>
-  <tutorialFunction></tutorialFunction>
+  <ruleBlock each = {i in ruleData} data = {i} ></ruleBlock>
+  <!-- <tutorialFunction></tutorialFunction> -->
 
 
 
@@ -50,21 +52,59 @@
     var that = this;
     this.cards = [
       {
-        img: "./img/card1.png",
+        img: "./img/function-back.png",
         title: "Function",
-        info: "loremloremloremloremloremloremloremlo, remloremloremloremlo remloremlor emloremloremloremlorem"
+        info: "Use computational thinking to unlock different possibilities of function card combinations."
       },
       {
-        img: "./img/card2.png",
+        img: "./img/property-back.png",
         title: "Property",
-        info: "loremloremloremloremloremloremloremlo, remloremloremloremloreml oremloremloremloremlo remlorem"
+        info: "The most powerful card and only bravery deserves it."
       },
       {
-        img: "./img/card3.png",
+        img: "./img/attack-back.png",
         title: "Attack",
-        info: "loremloremloremloremloremloremloremlor, emloremloremlorem loremloremloremloremlorem loremlorem"
-      } 
+        info: "Use the Attack card to tackle the enemies the game and win a new Property card."
+      },
+      {
+        img: "./img/movement-back.png",
+        title: "Movement",
+        info: "The seemingly easily obtained card, which consist your every step and have the unlimited potentials."
+      }  
     ]
+
+    this.ruleData = [
+      {
+        rule: "1. Everyone has no identity in the beginning of the game, the start position is the each corner of the chessboard. Every player has three blood initially.",
+        demo: "./img/chessboard.png"
+      },
+      {
+        rule: "2. In the beginning of the game, every player will start with 1 attack card, 1 movement card and 1 function cards in hand. Every turn each player could draw one movement card to start, after which they could use either to use it or not (which will allow them to stay at the same place for this turn). Only after using a movement card or a function card can the player draw a new function card. (one player can have 2 movement cards at most and 5 function card at most, 2 attack cards at most, 2 property cards at most)",
+        demo: "./img/rule-2.png"
+      },
+      {
+        rule: "3. A function can be used with a movement card every turn.",
+        demo: "./img/rule-3.png"
+      },
+      {
+        rule: "4. Once the players step on different color squares, they can use certain teleport function cards to transfer to another square with the same color.",
+        demo: "./img/rule-4.png"
+      },
+      {
+        rule: "5.The basic attack card only allow players to attack one square away in their forward direction. Once the players have an identity, they can only use the identity’s attack method.",
+        demo: "./img/rule-5.png"
+      },
+      {
+        rule: "6.Once a player being attacked, he has to go back to the initial point to restart his journey.",
+        demo: "./img/rule-6.png"
+      },
+      {
+        rule: "7.Stepping into the central red area will get the player one property cards, one player have only have two property cards at most.",
+        demo: "./img/rule-7.png"
+      },
+    ]
+
+
 
     this.index = 0;
     
@@ -78,7 +118,7 @@
     };
     changeRight() {
       this.index++;
-      if(this.index > 2) {
+      if(this.index > this.cards.length-1) {
         this.index = 0;
       };
       this.update();

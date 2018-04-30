@@ -92,7 +92,7 @@
       border-bottom: none;
     }
     .rules-wrap .demo .chessBlocks .blocks:nth-child(36){
-      background: #7B5380;
+      background: #222;
       border: none;
       text-align: center;
       color: #fff;

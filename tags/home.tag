@@ -17,7 +17,7 @@
     </div>
     <div class="head-content">
       <figure class="head-card">
-        <img src="./img/card1.png" alt="card1">
+        <img src="./img/function-back.png" alt="card1">
       </figure>
       <div class="intro">
         <h1>Code Battle</h1>
