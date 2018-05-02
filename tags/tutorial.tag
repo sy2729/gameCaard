@@ -95,12 +95,24 @@
         demo: "./img/rule-5.png"
       },
       {
-        rule: "6.Once a player being attacked, he has to go back to the initial point to restart his journey.",
+        rule: "6.Players have the option to stay at the same place for the current turn but lose the chance to draw a new movement card next turn",
+        demo: "./img/movement-back.png"
+      },
+      {
+        rule: "7.Similarly, the player even has the option to discard one movement card each turn, which will disable them to perform other action in the current turn and next turn",
+        demo: "./img/movement-back.png"
+      },
+      {
+        rule: "8.Once a player being attacked, he has to go back to the initial point to restart his journey.",
         demo: "./img/rule-6.png"
       },
       {
-        rule: "7.Stepping into the central red area will get the player one property cards, one player have only have two property cards at most.",
+        rule: "9.Stepping into the central red area will get the player one property cards, one player have only have two property cards at most.",
         demo: "./img/rule-7.png"
+      },
+      {
+        rule: "10.For movement card, players can execute to the last executable one if it's not fully executable. But a functional card has to be fully executable",
+        demo: "./img/rule-demo.png"
       },
     ]
 

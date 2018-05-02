@@ -3,9 +3,8 @@
   <footer>
     <div class="footer-left">
       <ul>
-        <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Terms of Use</a></li>
-        <li><a href="">FAQs</a></li>
+        <li><a href="">2018 Advanced Game Design</a></li>
+        <li><a href="">Shuai & Melon & Zhijing</a></li>
         <li><a href="">Contact</a></li>
       </ul>
       <p class="copyright">Copyright 2018 Code Battle | All Rights Reserved</p>

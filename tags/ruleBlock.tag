@@ -2,7 +2,7 @@
 <ruleBlock>
   <section class="tobeanimate ruleBlock-wrap">
     <p class="rule"> <span>{ this.opts.data.rule }</span></p>
-    <img src={ this.opts.data.demo } alt={ this.opts.data.rule } class="demo">
+    <img src={ this.opts.data.demo } alt="demo-picture" class="demo">
   </section>
   <script>
     var that = this;
@@ -17,6 +17,7 @@
       flex-wrap: wrap;
       justify-content: space-around;
       margin-top: 40px;
+      margin-bottom: 10px;
     }
     
     .ruleBlock-wrap .rule{
@@ -33,7 +34,8 @@
     }
     
     .ruleBlock-wrap .rule span {
-      font-size: 1.3em;
+      font-size: 1.2em;
+      font-weight: 100;
       line-height: 2em;
     }
   </style>
