@@ -29,6 +29,20 @@
     <script src="./tags/tutorialRules.tag" type="riot/tag"></script>
     <script src="./tags/tutorialFunction.tag" type="riot/tag"></script>
     <script src="./tags/ruleBlock.tag" type="riot/tag"></script>
+    <script src="./tags/question.tag" type="riot/tag"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDSB_NAOipKSoFJ4XzgT4QNMOIvKPo79t0",
+        authDomain: "todolist-f59af.firebaseapp.com",
+        databaseURL: "https://todolist-f59af.firebaseio.com",
+        projectId: "todolist-f59af",
+        storageBucket: "todolist-f59af.appspot.com",
+        messagingSenderId: "228377112675"
+    };
+    firebase.initializeApp(config);
+    </script>
     <script>
         riot.mount('*')
     </script>

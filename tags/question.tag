@@ -1,5 +1,4 @@
-
-<home>
+<question>
   <section class="head">
     <div class="head-nav clearfix">
       <div class="logo"><img src="./img/logo.png" alt=""></div>
@@ -17,43 +16,36 @@
         <img src="./img/function-back.png" alt="card1">
       </figure>
       <div class="intro">
-        <h1>Code Battle</h1>
-        <p>Learn to the play the chess like pros and play with others around the world</p>
-        <a href="#tutorial"><button class="headBtn">More</button></a>
+        <h1>Questions</h1>
+        <p>All Secrets Inside the Game and About Us</p>
       </div>
     </div>
   </section>
-  
-  <middle></middle>
-  
-  
-  <info-panel>
-  
-  </info-panel>
-  
-  
-  <info-footer>
-  
-  </info-footer>
+
+  <div class="page-wrap p-3">
+    <div class="each-question p-1" each={value, key in questionsData}>
+      <p class="name">{value.name[value.name.length - 1] === "?" ? value.name : value.name + "?"}</p>
+      <p class="answer">{value.answer || 'this is gonna be the answer'}</p>
+    </div>
+  </div>
+
+
   <script>
-    //detect scrolling
-      this.on('mount', function () {
-        var wrap = document.querySelectorAll('.tobeanimate');
-        window.onscroll = function () {
-          var scrollY = window.scrollY;
-          var minIndex = 0;
-          wrap.forEach(function (i, j) {
-            if (Math.abs(i.offsetTop - scrollY) < Math.abs(wrap[minIndex].offsetTop - scrollY)) {
-              minIndex = j;
-            };
-          })
-          wrap[minIndex].classList.add('slideIn');
-        }
-      })
+    
+    this.questionsData = null;
+
+    this.on('mount', ()=> {
+      this.db = firebase.database();
+
+      this.db.ref('gameCard/questions').once('value', (data)=> {
+        this.questionsData = data.val();
+        this.update();
+      });;
+    })
   </script>
 
   <style>
-   .head {
+  .head {
       background-image: linear-gradient(to right top, #7d5182, #bc5e84, #ec7774, #ffa05c, #fad452);
       /* height: 600px; */
       width: 100%;
@@ -73,7 +65,7 @@
     .head .head-nav .logo {
       float: left;
     }
-    .head .head-nav .logo img {
+    .head .head-nav .logo img{
       width: 40px;
       height: auto;
       vertical-align: middle;
@@ -93,6 +85,18 @@
     .head .head-nav .nav li a{
       color: inherit;
     }
+    .head .head-nav .nav #selectCard {
+      border: 1px solid #7B5380;
+      background: transparent;
+      width: 200px;
+      color: #FFFCE4;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .head .head-nav .nav #selectCard option{
+      background: transparent;
+    }
 
 
     .head .head-content {
@@ -101,10 +105,21 @@
       flex-wrap: wrap;
     }
 
+    .head > .head-content > .head-card {
+      position: relative;
+    }
     .head > .head-content > .head-card img {
       width: auto;
       height: 560px;
       margin: 0 auto;
+    }
+    .head > .head-content > .head-card > .changeBtn {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
     }
 
     .head > .head-content > .intro {
@@ -130,24 +145,29 @@
       font-weight: 100;
     }
 
-    .head > .head-content > .intro .headBtn {
-      width: 30%;
-      min-width: 100px;
-      height: 50px;
-      background: transparent;
-      color: #FFFEFD;
-      border: 1px solid #FFFEFD;
-      cursor: pointer;
-      font-size: 1.1em;
-      font-weight: 100;
-      transition: all .4s;
+
+    .slideIn {
+    opacity: 1 !important;
+}
+
+  
+    .each-question {
+      margin: 20px;
+    }
+    .name {
+      font-size: 2em;
     }
 
-    .head > .head-content > .intro .headBtn:hover {
-      color: #222;
-      background: rgba(255, 255 ,255, 1);
-      box-shadow: 2px 2px 7px 0 rgba(255, 255, 255, 0.4); 
-      box-shadow: -2px -2px 7px 0 rgba(255, 255, 255, 0.4); 
+
+    @media screen and (max-width: 500px) {
+      .page-wrap {
+        padding: 0;
+      }
+      .name {
+        font-size: 1.5em;
+      }
     }
   </style>
-</home>
+
+
+</question>

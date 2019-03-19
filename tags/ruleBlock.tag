@@ -39,5 +39,12 @@
       line-height: 2em;
       text-align: justify;
     }
+
+    @media screen and (max-width: 500px) {
+      .ruleBlock-wrap .rule span{
+        line-height: 1.5em;
+        padding: 0 1.5em;
+      }
+    }
   </style>
 </ruleBlock>

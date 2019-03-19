@@ -3,6 +3,7 @@
   
   <home if = {page === "home"}></home>
   <tutorial if = {page === "tutorial"}></tutorial>
+  <question if = {page === "question"}></question>
 
   <script>
     var that = this;

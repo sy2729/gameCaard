@@ -17,10 +17,7 @@
           <a href="#tutorial">Tutorial</a>
         </li>
         <li>
-          <a href="">Pricing</a>
-        </li>
-        <li>
-          <a href="">Blog</a>
+          <a href="#question">Questions</a>
         </li>
       </ul>
     </div>
