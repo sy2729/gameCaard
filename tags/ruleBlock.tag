@@ -37,6 +37,7 @@
       font-size: 1.2em;
       font-weight: 100;
       line-height: 2em;
+      text-align: justify;
     }
   </style>
 </ruleBlock>

@@ -78,6 +78,7 @@
 
       footer .footer-right .email input:focus {
         width: 250px;
+        padding-left: 20px;
       }
       footer .footer-right .email input:focus::placeholder {
         text-indent: -100%;

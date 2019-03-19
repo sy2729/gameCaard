@@ -138,7 +138,6 @@
       min-width: 100px;
       height: 50px;
       background: transparent;
-      border-radius: 10px;
       color: #FFFEFD;
       border: 1px solid #FFFEFD;
       cursor: pointer;

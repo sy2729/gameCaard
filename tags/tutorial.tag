@@ -205,6 +205,8 @@
       width: 200px;
       color: #FFFCE4;
       border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
     }
     .head .head-nav .nav #selectCard option{
       background: transparent;
